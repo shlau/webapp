@@ -1,23 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import backgroundImage from "./assets/unsplash1.jpg";
 
-function App() {
+import "./App.css";
+import { makeStyles } from "@material-ui/core";
+const useStyles = makeStyles({
+  profile: {
+    margin: "20px 0px 0px 20px",
+    padding: 1,
+    height: 300,
+    width: 300,
+    objectFit: "scale-down",
+  },
+});
+
+function Content(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        height: "100%",
+        width: "100%",
+        justifyContent: "center",
+        alignContent: "center",
+        textAlign:'center'
+      }}
+    >
+      <span
+        style={{
+          fontSize: 40,
+          fontWeight: "bold",
+          fontFamily: 'Open Sans',
+          color: "#0c0b0f",
+        }}
+      >
+        Sheldon Lau
+      </span>
+    </div>
+  );
+}
+function App() {
+  const classes = useStyles();
+  return (
+    <div
+      style={{
+        backgroundColor: "#282c34",
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        height: "100%",
+        width: "100%",
+      }}
+    >
+      {/* <Header className={classes.profile} /> */}
+      <Content />
     </div>
   );
 }
