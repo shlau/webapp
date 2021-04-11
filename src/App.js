@@ -2,13 +2,17 @@ import backgroundImage from "./assets/unsplash1.jpg";
 
 import "./App.css";
 import { makeStyles } from "@material-ui/core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhoneAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome//free-brands-svg-icons";
 const useStyles = makeStyles({
-  profile: {
-    margin: "20px 0px 0px 20px",
-    padding: 1,
-    height: 300,
-    width: 300,
-    objectFit: "scale-down",
+  icons: {
+    "& svg": {
+      marginRight: 40,
+    },
+    "& a": {
+      color: "black",
+    },
   },
 });
 
@@ -22,19 +26,40 @@ function Content(props) {
         width: "100%",
         justifyContent: "center",
         alignContent: "center",
-        textAlign:'center'
+        textAlign: "center",
       }}
     >
       <span
         style={{
           fontSize: 40,
           fontWeight: "bold",
-          fontFamily: 'Open Sans',
+          fontFamily: "Open Sans",
           color: "#0c0b0f",
         }}
       >
         Sheldon Lau
       </span>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignContent: "center",
+          marginLeft: 35,
+        }}
+      >
+        <a href="https://github.com/shlau">
+          <FontAwesomeIcon icon={faGithub} size="lg" />
+        </a>
+        <a href="tel:+14157794121">
+          <FontAwesomeIcon icon={faPhoneAlt} size="lg" />
+        </a>
+        <a href="mailto: sheldonlau1@gmail.com">
+          <FontAwesomeIcon icon={faEnvelope} size="lg" />
+        </a>
+        <a href="https://www.linkedin.com/in/sheldon-lau">
+          <FontAwesomeIcon icon={faLinkedin} size="lg" />
+        </a>
+      </div>
     </div>
   );
 }
@@ -42,6 +67,7 @@ function App() {
   const classes = useStyles();
   return (
     <div
+      className={classes.icons}
       style={{
         backgroundColor: "#282c34",
         backgroundImage: `url(${backgroundImage})`,
@@ -51,7 +77,6 @@ function App() {
         width: "100%",
       }}
     >
-      {/* <Header className={classes.profile} /> */}
       <Content />
     </div>
   );
