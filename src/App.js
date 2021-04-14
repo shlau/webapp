@@ -69,7 +69,7 @@ function App() {
     <div
       className={classes.icons}
       style={{
-        backgroundColor: "#282c34",
+        backgroundColor: "#edeef0",
         backgroundImage: `url(${backgroundImage})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
