@@ -1,10 +1,10 @@
 import backgroundImage from "./assets/unsplash1.jpg";
-
 import "./App.css";
 import { makeStyles } from "@material-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhoneAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome//free-brands-svg-icons";
+import './fonts/OpenSans-Regular.ttf';
 const useStyles = makeStyles({
   icons: {
     "& svg": {
