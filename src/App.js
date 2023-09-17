@@ -53,7 +53,7 @@ function Content(props) {
         <a href="tel:+14157794121">
           <FontAwesomeIcon icon={faPhoneAlt} size="lg" />
         </a>
-        <a href="mailto: sheldonlau1@gmail.com">
+        <a href="mailto: contact@sheldonlau.com">
           <FontAwesomeIcon icon={faEnvelope} size="lg" />
         </a>
         <a href="https://www.linkedin.com/in/sheldon-lau">
